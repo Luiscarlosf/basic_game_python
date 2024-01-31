@@ -14,12 +14,15 @@ na palavra secreta.
 Faça a contagem de tentativas do seu
 usuário.
 """
+import os
 
 palavra_secreta = 'banana'
 contagem = 0
 palavra_adivinha = '*' * len(palavra_secreta)  # variável responsável por guardar a palavra com as letras adivinhadas
 
 while True:
+
+    os.system('cls' if os.name == 'nt' else 'clear')
 
     print(palavra_adivinha)
     alternativa = input('Digite uma letra: ').lower()
